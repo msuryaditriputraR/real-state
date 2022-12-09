@@ -23,6 +23,15 @@ const popularSwiper = new Swiper(".popular__container", {
 });
 
 /*=============== VALUE ACCORDION ===============*/
+const accordionItems = document.querySelectorAll(".value__accordion-item");
+
+accordionItems.forEach((item) => {
+    const accordionHeader = item.querySelector(".value__accordion-header");
+
+    accordionHeader.addEventListener("click", function () {
+        item.classList.toggle("accordion-open");
+    });
+});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
