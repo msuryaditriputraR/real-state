@@ -58,6 +58,16 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 /*=============== SHOW SCROLL UP ===============*/
+function toggleElement(elementId, elementClass) {
+    const element = document.getElementById(elementId);
+
+    element.classList[this.scrollY >= 350 ? "add" : "remove"](elementClass);
+}
+
+window.addEventListener("scroll", () => {
+    /* === Show Scroll === */
+    toggleElement("scroll-up", "show-scroll");
+});
 
 /*=============== DARK LIGHT THEME ===============*/
 
